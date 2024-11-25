@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Header Styling */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.marquee {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+nav.menu {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav.menu ul li {
+    display: inline;
+}
+
+nav.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav.menu ul li a:hover {
+    color: #FFD700;
+}
+
+/* Responsive Hamburger Menu */
+@media screen and (max-width: 768px) {
+    nav.menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    nav.menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav.menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav.menu ul li {
+        text-align: center;
+    }
+
+    nav.menu ul li a {
+        font-size: 20px;
+    }
+}
+
+/* Main Container and Prediction Card */
+.container {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.prediction-card {
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.prediction-card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling the List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "✔️";
+    margin-right: 8px;
+}
+
+/* Error Message Styling */
+.error {
+    font-size: 16px;
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Smooth Scrolling for Marquee */
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

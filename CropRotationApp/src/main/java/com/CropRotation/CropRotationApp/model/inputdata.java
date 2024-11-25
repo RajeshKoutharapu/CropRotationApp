@@ -34,12 +34,12 @@ public class inputdata {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public inputdata(String crop1, String crop2, String soil, String season) {
+	public inputdata(String crop1, String crop2, String soil) {
 		super();
 		this.crop1 = crop1;
 		this.crop2 = crop2;
 		this.soil = soil;
-		this.season = season;
+	
 	}
 	
 }

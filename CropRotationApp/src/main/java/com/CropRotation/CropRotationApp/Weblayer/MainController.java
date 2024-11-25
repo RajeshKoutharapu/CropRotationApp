@@ -27,15 +27,11 @@ public class MainController {
 	
 	@GetMapping("/getinput")
 	public String getdat(Model model ,@ModelAttribute("data") inputdata data){
-		 
-	
-		 
-		   List<String> list=crop.getdata(data);
-
-			model.addAttribute("list",list);
 		
-
-		return "Mainpage";
+	        List<String> list=crop.getdata(data);
+	    
+	        model.addAttribute("list",list);
+		    return "outputs";
 	}
 	
 	
